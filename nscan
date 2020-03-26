@@ -1,0 +1,1 @@
+if [ -z $1 ]; then echo "Usage: scannetwork [INTERFACE]"; else nmap -sP `ip addr show | grep $1 | grep inet | awk '{print $2}';`; fi
